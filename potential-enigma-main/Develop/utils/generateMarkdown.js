@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license){
-    return `https://img.shields.io/static/v1?label=License&message=${license}&color=orange`;
+    return `https://img.shields.io/badge/License-${license}-orange`;
 
   } else{
     return "";
@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license){
     return `## License
-    This project is under (${renderLicenseLink(license)}) License.
+    This project is under [${license}](${renderLicenseLink(license)}) License.
     `;
   } else {
     return "";
@@ -39,32 +39,34 @@ function generateMarkdown(data) {
 
   ${renderLicenseBadge(data.license)}
 
-  ##Description
+  ## Description
   ${data.description}
 
-  ##Table of Contents
+  ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Credits](#credits)
-  * [License}](#license)
+  * [License](#license)
   
-  ##Installation
+  ## Installation
   ${data.install}
 
-  ##Usage
+  ## Usage
   ${data.usage}
 
-  ##Credits
+  ## Credits
   ${data.credits}
 
-  ##Contributing
+  ${renderLicenseSection(data.license)}
+
+  ## Contributing
   ${data.contribute}
 
-  ##Tests
+  ## Tests
   ${data.test}
 
-  ##Questions
-  If you have any questions or concerns about this application, please contact me via email: <${data.email}> You may also visit my Github page: https://github.com${data.username}
+  ## Questions
+  If you have any questions or concerns about this application, please contact me via email: <${data.email}> You may also visit my Github page: https://github.com/${data.username}
 `;
 }
 
