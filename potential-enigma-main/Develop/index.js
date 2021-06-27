@@ -9,7 +9,7 @@ const promptUser = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'Project Title',
+            name: 'Title',
             message: "What is your Project Title?(Required)",
             validate: titleInput =>{
                 if (titleInput){
@@ -131,15 +131,17 @@ const promptUser = () => {
         }
     ])
 }
-promptUser().then(answers => console.log(answers));
+//promptUser().then(answers => console.log(answers));
 
-promptUser().then(function(data){
-    writeToFile(data.username + "readme", data)
+promptUser()
+.then(answers =>{
+    console.info('Answers', answers);
+    writeToFile(answers.username+"readme.md", answers);
 })
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
+    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function(err) {
 
         if (err) {
           return console.log(err);
