@@ -104,13 +104,54 @@ const promptUser = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: "What is your GitHub Username? (Required)",
+            validate: (nameInput) =>{
+                if (nameInput){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address? (Required)',
+            validate: (emailInput) => {
+                if (emailInput){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         }
     ])
 }
 promptUser().then(answers => console.log(answers));
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+promptUser().then(function(data){
+    writeToFile(data.username + "readme", data)
+})
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
+
+        if (err) {
+          return console.log(err);
+        }
+    
+        console.log("Success!");
+    
+      });
+
+
+
+}
 
 // // TODO: Create a function to initialize app
 // function init() {}
