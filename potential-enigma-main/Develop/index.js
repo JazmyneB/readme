@@ -55,7 +55,7 @@ const promptUser = () => {
         },
         {
             type: "input",
-            name: "Usage",
+            name: "usage",
             message: "Please provide instructions and examples for use:",
             validate: (usageInput) => {
                 if (usageInput){
@@ -76,7 +76,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Credits',
+            name: 'credits',
             message: "List your collaborators with the Links to their Github profiles:",
             when: ({confirmCollab}) => {
                 if (confirmCollab){
@@ -95,7 +95,7 @@ const promptUser = () => {
         },
         {
             type: 'list',
-            name: 'License',
+            name: 'license',
             message: "Which License would you like to include?",
             choices: ["MIT", "Apache", "GPL"],
             when: ({confirmL}) => {
@@ -129,6 +129,16 @@ const promptUser = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'contribute',
+            message: 'Add guidelines for developers to contribute to your application: '
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: "Write tests for your application, then provide examples on how to run them"
         }
     ])
 }
