@@ -1,34 +1,34 @@
-# G
+# Generators
 
-  https://img.shields.io/static/v1?label=License&message=Apache&color=orange
+  ![License](https://img.shields.io/badge/License-GPL-orange.svg)
 
-  ##Description
-  generates
+  ## Description
+  Generates
 
-  ##Table of Contents
+  ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Credits](#credits)
-  * [License}](#license)
+  * [License](#license)
   
-  ##Installation
+  ## Installation
   download
 
-  ##Usage
+  ## Usage
   use
 
-  ##Credits
+  ## Credits
   undefined
 
   ## License
-    This project is under (https://opensource.org/licenses/Apache-2.0) License.
+    This project is Licensed under __GPL__. FOr more information, please visit: __https://opensource.org/licenses/gpl-license__ 
     
 
-  ##Contributing
-  contribute
+  ## Contributing
+  contact me 
 
-  ##Tests
+  ## Tests
   tests
 
-  ##Questions
-  If you have any questions or concerns about this application, please contact me via email: <Leehub@email.com> You may also visit my Github page: https://github.comLeehub
+  ## Questions
+  If you have any questions or concerns about this application, please contact me via email: __leehub@email.com__ You may also visit my Github page: __https://github.com/Leehub__
