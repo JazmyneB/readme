@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license){
     return `## License
-    This project is under ${license.choices}(${renderLicenseLink(license)}) License.
+    This project is under (${renderLicenseLink(license)}) License.
     `;
   } else {
     return "";
@@ -46,7 +46,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * [Credits](#credits)
-  * [License](#license)
+  * [License}](#license)
   
   ##Installation
   ${data.install}
@@ -62,6 +62,9 @@ function generateMarkdown(data) {
 
   ##Tests
   ${data.test}
+
+  ##Questions
+  If you have any questions or concerns about this application, please contact me via email: <${data.email}> You may also visit my Github page: https://github.com${data.username}
 `;
 }
 
